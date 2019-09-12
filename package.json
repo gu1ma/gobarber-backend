@@ -6,6 +6,11 @@
   "author": "Gabriel Guimarães <gabrielgs1408@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "sucrase": "^3.10.1"
+  },
+  "scripts":{
+    "dev": "nodemon src/server.js"
   }
 }
