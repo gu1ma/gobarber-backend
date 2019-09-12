@@ -1,0 +1,11 @@
+{
+  "name": "gobarber-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gu1ma/gobarber-backend.git",
+  "author": "Gabriel Guimarães <gabrielgs1408@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
