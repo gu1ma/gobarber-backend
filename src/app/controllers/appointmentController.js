@@ -8,6 +8,8 @@ import User from '../models/user';
 import File from '../models/file';
 import NotificationSchema from '../schemas/notification';
 
+import Mail from '../../lib/mail';
+
 
 class AppointmentController {
   async index(req, res) {
@@ -101,7 +103,13 @@ class AppointmentController {
   }
 
   async delete(req, res) {
-    const appointment = await Appointment.findByPk(req.params.id);
+    const appointment = await Appointment.findByPk(req.params.id, {
+      include: [{
+        model: User,
+        as: 'provider',
+        attributes: ['name', 'email'],
+      }],
+    });
 
     if (appointment.user_id !== req.userId) {
       return res.status(401).json({
@@ -118,6 +126,12 @@ class AppointmentController {
     appointment.canceled_at = new Date();
 
     await appointment.save();
+
+    await Mail.sendMail({
+      to: `${appointment.provider.name} <${appointment.provider.email}>`,
+      subject: 'Agendamento cancelado',
+      text: 'Você tem um novo cancelamento',
+    });
 
     return res.json(appointment);
   }
