@@ -9,6 +9,7 @@ First, you will need that docker images: <br/>
 - Postgres: `docker run --name database -e POSTGRES_PASSWORD={YOU_PASSWORD} -p 5432:5432 -d postgres:11`
 - Mongodb: `docker run --name mongobarber -p 27017:27017 -d -t mongo`
 - Redis: `docker run --name redisbarber -p 6379:6379 -d -t redis:alpine`
+- Start the containers: `docker start mongobarber redisbarber database` <br/>
 
 ### Installing
 Now, just clone this repository and run: 
