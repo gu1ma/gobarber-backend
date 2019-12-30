@@ -1,5 +1,7 @@
 # Go Barber!
-This is a web service developer for __gobarber web application__ and __gobarber mobile application__ (both will be developed soon :D)
+This is a web service developed for:
+- [__gobarber web application__](https://github.com/gu1ma/gobarber-web)
+- __gobarber mobile application__ (will be developed soon :D)
 
 ### Getting started
 These instructions will get you a copy of the project up and running on your local machine.
