@@ -1,4 +1,4 @@
-# Go Barber!
+# Go Barber Backend!
 This is a web service developed for:
 - [__gobarber web application__](https://github.com/gu1ma/gobarber-web)
 - __gobarber mobile application__ (will be developed soon :D)
